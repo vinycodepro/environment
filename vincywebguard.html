@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VincyGreenGuard - Environmental Conservation Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="vincywebguard.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-seedling"></i>
+                <h1>VincyGreenGuard</h1>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#eco-actions">Eco Actions</a>
+                <a href="#blog">Blog</a>
+                <a href="#forum">Forum</a>
+                <a href="#events">Events</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            
+            <div class="auth-buttons">
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="btn-primary" id="loginBtn">Login</button>
+                <button class="btn-secondary" id="signupBtn">Sign Up</button>
+            </div>
+            
+            <button class="mobile-menu" id="mobileMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Protect Our Planet, One Action at a Time</h2>
+            <p>Join our community of environmental champions and make a difference through sustainable actions, education, and collaboration.</p>
+            <button class="btn-accent">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Features</h2>
+                <p>Discover how you can contribute to environmental conservation</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Eco Actions Tracker</h3>
+                    <p>Log your sustainable activities and earn points for your contributions to the environment.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Community Forum</h3>
+                    <p>Connect with like-minded individuals, share ideas, and discuss environmental topics.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-newspaper"></i>
+                    <h3>Educational Resources</h3>
+                    <p>Access articles, guides, and news about environmental conservation and sustainability.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Events & Activities</h3>
+                    <p>Find and participate in local conservation events, clean-ups, and workshops.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eco Actions Section -->
+    <section id="eco-actions">
+        <div class="container">
+            <div class="section-title">
+                <h2>Eco Actions Tracker</h2>
+                <p>Log your environmental activities and earn points</p>
+            </div>
+            
+            <div class="eco-actions">
+                <h3>Log a New Action</h3>
+                <form class="action-form">
+                    <div class="form-group">
+                        <label for="action-type">Action Type</label>
+                        <select id="action-type">
+                            <option value="">Select an action</option>
+                            <option value="recycling">Recycling</option>
+                            <option value="tree-planting">Tree Planting</option>
+                            <option value="clean-up">Clean-up Activity</option>
+                            <option value="water-conservation">Water Conservation</option>
+                            <option value="energy-saving">Energy Saving</option>
+                            <option value="sustainable-transport">Sustainable Transport</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="action-date">Date</label>
+                        <input type="date" id="action-date">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="action-description">Description</label>
+                        <textarea id="action-description" rows="3" placeholder="Describe your action..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="action-impact">Estimated Impact</label>
+                        <input type="text" id="action-impact" placeholder="e.g., 5kg of waste recycled">
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Log Action</button>
+                </form>
+                
+                <h3>Your Recent Actions</h3>
+                <div class="actions-list">
+                    <div class="action-item">
+                        <div class="action-info">
+                            <h4>Planted Trees</h4>
+                            <p>Yesterday • 10 trees planted in local park</p>
+                        </div>
+                        <div class="action-points">+50 pts</div>
+                    </div>
+                    
+                    <div class="action-item">
+                        <div class="action-info">
+                            <h4>Recycling</h4>
+                            <p>2 days ago • 5kg of plastic recycled</p>
+                        </div>
+                        <div class="action-points">+30 pts</div>
+                    </div>
+                    
+                    <div class="action-item">
+                        <div class="action-info">
+                            <h4>Clean-up</h4>
+                            <p>5 days ago • Beach clean-up activity</p>
+                        </div>
+                        <div class="action-points">+40 pts</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="leaderboard">
+                <h3>Community Leaderboard</h3>
+                <ul class="leaderboard-list">
+                    <li class="leaderboard-item rank-1">
+                        <div class="user-rank">
+                            <span class="rank-number">1</span>
+                            <div class="user-info">
+                                <div class="user-avatar">ES</div>
+                                <div>
+                                    <h4>Cynthia Wakesho</h4>
+                                    <p>Environmental Activist</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-score">1,250 pts</div>
+                    </li>
+                    
+                    <li class="leaderboard-item rank-2">
+                        <div class="user-rank">
+                            <span class="rank-number">2</span>
+                            <div class="user-info">
+                                <div class="user-avatar">JD</div>
+                                <div>
+                                    <h4>Francis Kibet</h4>
+                                    <p>Conservation Volunteer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-score">980 pts</div>
+                    </li>
+                    
+                    <li class="leaderboard-item rank-3">
+                        <div class="user-rank">
+                            <span class="rank-number">3</span>
+                            <div class="user-info">
+                                <div class="user-avatar">SJ</div>
+                                <div>
+                                    <h4>Vincent Munyanya</h4>
+                                    <p>Sustainability Advocate</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-score">850 pts</div>
+                    </li>
+                    
+                    <li class="leaderboard-item">
+                        <div class="user-rank">
+                            <span class="rank-number">4</span>
+                            <div class="user-info">
+                                <div class="user-avatar">MB</div>
+                                <div>
+                                    <h4>Irene Wairimu</h4>
+                                    <p>Eco Enthusiast</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-score">720 pts</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest Articles</h2>
+                <p>Stay informed with our environmental conservation content</p>
+            </div>
+            
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80');"></div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>May 15, 2023</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3>10 Simple Ways to Reduce Your Carbon Footprint</h3>
+                        <p>Discover practical steps you can take today to make a positive impact on the environment.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>May 10, 2023</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3>The Importance of Reforestation in Climate Change Mitigation</h3>
+                        <p>Learn how planting trees can help combat climate change and restore ecosystems.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>May 5, 2023</span>
+                            <span>4 min read</span>
+                        </div>
+                        <h3>How to Start a Community Garden in Your Neighborhood</h3>
+                        <p>A step-by-step guide to creating a sustainable community garden that brings people together.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forum Section -->
+    <section id="forum">
+        <div class="container">
+            <div class="section-title">
+                <h2>Community Forum</h2>
+                <p>Join the conversation about environmental conservation</p>
+            </div>
+            
+            <div class="forum-container">
+                <div class="forum-categories">
+                    <h3>Categories</h3>
+                    <ul class="category-list">
+                        <li class="category-item"><a href="#">General Discussion</a></li>
+                        <li class="category-item"><a href="#">Eco Actions & Tips</a></li>
+                        <li class="category-item"><a href="#">Local Initiatives</a></li>
+                        <li class="category-item"><a href="#">Policy & Advocacy</a></li>
+                        <li class="category-item"><a href="#">Questions & Help</a></li>
+                    </ul>
+                </div>
+                
+                <div class="forum-posts">
+                    <div class="post-item">
+                        <div class="post-header">
+                            <div class="post-author">
+                                <div class="user-avatar">ES</div>
+                                <div>
+                                    <h4>Cynthia Wakesho</h4>
+                                    <p>Environmental Activist</p>
+                                </div>
+                            </div>
+                            <div class="post-date">2 hours ago</div>
+                        </div>
+                        <div class="post-content">
+                            <h4>Best practices for organizing a community clean-up</h4>
+                            <p>I'm planning to organize a beach clean-up in my local area next month. Does anyone have experience with this and can share tips on how to make it successful?</p>
+                        </div>
+                        <div class="post-actions">
+                            <div class="post-action">
+                                <i class="far fa-comment"></i>
+                                <span>12 comments</span>
+                            </div>
+                            <div class="post-action">
+                                <i class="far fa-heart"></i>
+                                <span>24 likes</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="post-item">
+                        <div class="post-header">
+                            <div class="post-author">
+                                <div class="user-avatar">JD</div>
+                                <div>
+                                    <h4>Francis Kibet</h4>
+                                    <p>Conservation Volunteer</p>
+                                </div>
+                            </div>
+                            <div class="post-date">1 day ago</div>
+                        </div>
+                        <div class="post-content">
+                            <h4>Effective ways to reduce plastic waste at home</h4>
+                            <p>I've been trying to minimize my plastic consumption and would love to hear what strategies have worked for others in the community.</p>
+                        </div>
+                        <div class="post-actions">
+                            <div class="post-action">
+                                <i class="far fa-comment"></i>
+                                <span>8 comments</span>
+                            </div>
+                            <div class="post-action">
+                                <i class="far fa-heart"></i>
+                                <span>15 likes</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="post-item">
+                        <div class="post-header">
+                            <div class="post-author">
+                                <div class="user-avatar">SJ</div>
+                                <div>
+                                    <h4>Vincent Munyanya</h4>
+                                    <p>Sustainability Advocate</p>
+                                </div>
+                            </div>
+                            <div class="post-date">3 days ago</div>
+                        </div>
+                        <div class="post-content">
+                            <h4>Upcoming climate action events in the city</h4>
+                            <p>There are several environmental events happening this month. Let's compile a list and coordinate attendance!</p>
+                        </div>
+                        <div class="post-actions">
+                            <div class="post-action">
+                                <i class="far fa-comment"></i>
+                                <span>5 comments</span>
+                            </div>
+                            <div class="post-action">
+                                <i class="far fa-heart"></i>
+                                <span>11 likes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events">
+        <div class="container">
+            <div class="section-title">
+                <h2>Upcoming Events</h2>
+                <p>Join environmental activities in your community</p>
+            </div>
+            
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-image" style="background-image: url('https://tse1.mm.bing.net/th/id/OIP.imF50Ieb0laMfL1HgHVsfQHaEK?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3');"></div>
+                    <div class="event-content">
+                        <div class="event-meta">
+                            <span class="event-date">June 5, 2023</span>
+                            <span class="event-location">City Park</span>
+                        </div>
+                        <h3>Community Tree Planting</h3>
+                        <p>Join us for a day of planting native trees to improve our local ecosystem and combat climate change.</p>
+                        <button class="btn-primary">Register</button>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <div class="event-image" style="background-image: url('https://tse1.mm.bing.net/th/id/OIP.DeD1tOhI65SWzBXLtxhmTAHaE5?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3');"></div>
+                    <div class="event-content">
+                        <div class="event-meta">
+                            <span class="event-date">June 12, 2023</span>
+                            <span class="event-location">Beachfront</span>
+                        </div>
+                        <h3>Beach Clean-Up Day</h3>
+                        <p>Help remove plastic waste and debris from our local beaches to protect marine life.</p>
+                        <button class="btn-primary">Register</button>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <div class="event-image" style="background-image: url('https://tse4.mm.bing.net/th/id/OIP.BnsBxmlA5HIym7LcMDHvGAHaFj?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3');"></div>
+                    <div class="event-content">
+                        <div class="event-meta">
+                            <span class="event-date">June 18, 2023</span>
+                            <span class="event-location">Community Center</span>
+                        </div>
+                        <h3>Sustainable Living Workshop</h3>
+                        <p>Learn practical tips for reducing your environmental footprint in everyday life.</p>
+                        <button class="btn-primary">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with any questions or suggestions</p>
+            </div>
+            
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Your name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Your email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="Subject of your message">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Your message..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>VincyGreenGuard</h3>
+                    <p>Join our mission to protect the environment through collective action and education.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#eco-actions">Eco Actions</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#forum">Forum</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Environmental Tips</a></li>
+                        <li><a href="#">Action Guides</a></li>
+                        <li><a href="#">Research Papers</a></li>
+                        <li><a href="#">Educational Materials</a></li>
+                        <li><a href="#">Partner Organizations</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Karen Plains, Nairobi</li>
+                        <li><i class="fas fa-phone"></i> +254 68941873</li>
+                        <li><i class="fas fa-envelope"></i> info@vincygreenguard.org</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 VincyGreenGuard. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Login to Your Account</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="login-email">Email Address</label>
+                    <input type="email" id="login-email" placeholder="Your email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Your password">
+                </div>
+                
+                <button type="submit" class="btn-primary" style="width: 100%;">Login</button>
+            </form>
+            <p style="text-align: center; margin-top: 15px;">Don't have an account? <a href="#" id="switchToSignup">Sign up</a></p>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Create an Account</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" placeholder="Your name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="signup-email">Email Address</label>
+                    <input type="email" id="signup-email" placeholder="Your email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" placeholder="Create a password">
+                </div>
+                
+                <div class="form-group">
+                    <label for="signup-confirm">Confirm Password</label>
+                    <input type="password" id="signup-confirm" placeholder="Confirm your password">
+                </div>
+                
+                <button type="submit" class="btn-primary" style="width: 100%;">Sign Up</button>
+            </form>
+            <p style="text-align: center; margin-top: 15px;">Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+        </div>
+    </div>
+
+    <script src="vincywebguard.js"></script>
+</body>
+</html>
